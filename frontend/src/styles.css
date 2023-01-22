@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+ul {
+    list-style-type: none;
+    padding: 0px !important;
+    overflow: hidden;
+    background-color: green;
+  }
+  
+ li {
+    float: left;
+  }
+  
+  a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    cursor: pointer;
+  }
+  
+  li a:hover {
+    background-color: yellow;
+  }
+
+  .list-group-item , .list-group{
+    background-color: teal;
+  }
+
+  
+
+  .container{
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width : 100%;
+  }
+
+  .nav_bar {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 5;
+  }

@@ -7,6 +7,9 @@ namespace WebApplication1.DataAccess
     {
         protected readonly IConfiguration Configuration;
         public DbSet<Avion> Avion { get; set; }
+
+        public DbSet<Ciudad> Ciudad { get; set; }
+
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }
