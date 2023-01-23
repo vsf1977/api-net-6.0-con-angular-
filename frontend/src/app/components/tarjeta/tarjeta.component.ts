@@ -30,4 +30,10 @@ export class TarjetaComponent implements OnInit {
     })
   }
 
+  borrar(id : any){
+    this.dataService.delete(this.ruta,id).subscribe((data) =>  {
+        this.cargar(this.ruta);
+    });
+  }
+
 }
