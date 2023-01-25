@@ -1,6 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
-import { TarjetaComponent } from '../tarjeta/tarjeta.component';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +14,19 @@ export class NavbarComponent implements OnInit {
   }
 
   routing(e : Event){
-    this.dataService.enviar((e.target as HTMLInputElement).id);
+    const ruta = (e.target as HTMLInputElement).id
+    this.dataService.enviar(ruta);
+    const menu = document.getElementById("menu")?.childNodes;    
+    menu?.forEach(item =>
+      { const enlace = item.firstChild;
+         console.log(enlace);
+        (enlace as HTMLInputElement).classList.remove("actual");
+        (enlace as HTMLInputElement).classList.add("normal");
+        if ((enlace as HTMLInputElement).id == ruta){
+          (enlace as HTMLInputElement).classList.add("actual");
+          (enlace as HTMLInputElement).classList.remove("normal");   
+        }
+    });
   }
 
 }

@@ -81,3 +81,4 @@ C:\Users\vsilva\source\repos\WebApplication1\WebApplication1\bin\Debug\net6.0\Mi
 C:\Users\vsilva\source\repos\WebApplication1\WebApplication1\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\vsilva\source\repos\WebApplication1\WebApplication1\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\vsilva\source\repos\WebApplication1\WebApplication1\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\vsilva\source\repos\WebApplication1\WebApplication1\bin\Debug\net6.0\System.Net.Http.Formatting.dll

@@ -8,25 +8,23 @@ import { DataService } from 'src/app/services/data.service';
 export class TarjetaComponent implements OnInit {
 
   items: any[] = [];
-  ruta : string ='';
+  ruta : string = '';
   constructor(public dataService: DataService) { }
 
-  cargar(ruta : string){
+  cargar(ruta : string){    
     this.dataService.getAll(ruta).subscribe((data) =>  {
-      if (data)      {
-        console.log(data)
-        this.items = data;
-      } else {
-        alert('No hay paises para mostrar');
-      }
+      this.items = data;      
+      console.log(data)
+      if (!data.length) 
+        alert('No hay registros para mostrar');      
     });
   }
 
-  ngOnInit(): void {    
-    this.dataService.recibir.subscribe((data) =>{
-      this.items = [];
-      this.ruta = data;
-      this.cargar(data);
+  ngOnInit(): void {   
+    this.dataService.recibir.subscribe((ruta) =>{
+      this.items = [];      
+      this.ruta = ruta;
+      this.cargar(ruta);      
     })
   }
 

@@ -5,12 +5,12 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Domain
 {
-    public class AvionDomainService
+    public class VueloDomainService
     {
         private DataContext _context;
 
         #region Constructor
-        public AvionDomainService(DataContext dataContext)
+        public VueloDomainService(DataContext dataContext)
         {
             _context = dataContext;
         }
@@ -18,29 +18,29 @@ namespace WebApplication1.Domain
 
 
         #region Methods
-        public List<Avion> GetAll()
+        public List<Vuelo> GetAll()
         {
-            return _context.Avion.ToList();
+            return _context.Vuelo.ToList();
         }
 
-        public ActionResult<dynamic> Insert(Avion avion)
+        public ActionResult<dynamic> Insert(Vuelo vuelo)
         {
-            _context.Avion.AddAsync(avion);            
+            _context.Vuelo.AddAsync(vuelo);            
             return _context.SaveChanges();
         }
 
-        public ActionResult<dynamic> Update(Avion avion)
+        public ActionResult<dynamic> Update(Vuelo vuelo)
         {
-            _context.Avion.Update(avion);
+            _context.Vuelo.Update(vuelo);
             return _context.SaveChanges();
         }
 
         public ActionResult<dynamic> Delete(Guid id)
         {
-            Avion avion = _context.Avion.Where(x => x.id == id).FirstOrDefault();
-            if (avion != null)
+            Vuelo vuelo = _context.Vuelo.Where(x => x.id == id).FirstOrDefault();
+            if (vuelo != null)
             {
-                _context.Avion.Remove(avion);
+                _context.Vuelo.Remove(vuelo);
                 return _context.SaveChanges();
             }
             return HttpStatusCode.NoContent;

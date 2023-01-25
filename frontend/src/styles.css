@@ -22,9 +22,12 @@ ul {
 
   .list-group-item , .list-group{
     background-color: teal;
-  }
+  }  
 
-  
+  .list-group > div{
+    display: flex !important;
+    flex-direction: column !important;
+  }
 
   .container{
     margin-top: 80px;
@@ -40,3 +43,16 @@ ul {
     width: 100%; /* Full width */
     z-index: 5;
   }
+
+  .actual{
+    background-color: blue;
+    text-decoration: none !important;
+    color: black;
+  }
+
+  .normal{
+    color: black;
+    text-decoration: none; 
+  }
+
+

@@ -18,7 +18,7 @@ namespace WebApplication1.Domain
 
 
         #region Methods
-        public ActionResult<dynamic> GetAll()
+        public List<Ciudad> GetAll()
         {
             return _context.Ciudad.ToList();
         }
@@ -37,7 +37,7 @@ namespace WebApplication1.Domain
 
         public ActionResult<dynamic> Delete(Guid id)
         {
-            Ciudad ciudad = _context.Ciudad.Where(x => x.Id == id).FirstOrDefault();
+            Ciudad ciudad = _context.Ciudad.Where(x => x.id == id).FirstOrDefault();
             if (ciudad != null)
             {
                 _context.Ciudad.Remove(ciudad);

@@ -9,6 +9,7 @@ namespace WebApplication1.DataAccess
         public DbSet<Avion> Avion { get; set; }
 
         public DbSet<Ciudad> Ciudad { get; set; }
+        public DbSet<Vuelo> Vuelo { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {

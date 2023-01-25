@@ -2,7 +2,7 @@
 {
     public class Ciudad
     {
-        public Guid Id { get; set; }
-        public string Nombre { get; set; }
+        public Guid id { get; set; }
+        public string nombre { get; set; }
     }
 }

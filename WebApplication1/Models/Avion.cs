@@ -2,8 +2,8 @@
 {
     public class Avion
     {
-        public Guid Id { get; set; } 
-        public string Matricula { get; set; }  
-        public string Fabricante { get; set; } 
+        public Guid id { get; set; } 
+        public string matricula { get; set; }  
+        public string fabricante { get; set; } 
     }
 }

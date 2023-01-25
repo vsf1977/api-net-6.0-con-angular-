@@ -12,7 +12,9 @@ namespace WebApplication1.Controllers
             services.AddTransient<AvionDomainService>();
             services.AddTransient<AvionApplicationService>();
             services.AddTransient<CiudadDomainService>();
-            services.AddTransient<CiudadApplicationService>();
+            services.AddTransient<CiudadApplicationService>(); 
+            services.AddTransient<VueloDomainService>();
+            services.AddTransient<VueloApplicationService>();
         }
     }
 }
