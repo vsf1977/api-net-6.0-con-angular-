@@ -19,7 +19,6 @@ export class NavbarComponent implements OnInit {
     const menu = document.getElementById("menu")?.childNodes;    
     menu?.forEach(item =>
       { const enlace = item.firstChild;
-         console.log(enlace);
         (enlace as HTMLInputElement).classList.remove("actual");
         (enlace as HTMLInputElement).classList.add("normal");
         if ((enlace as HTMLInputElement).id == ruta){

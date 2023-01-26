@@ -20,7 +20,7 @@ namespace WebApplication1.Domain
         #region Methods
         public List<Avion> GetAll()
         {
-            return _context.Avion.ToList();
+            return _context.Avion.OrderBy(x => x.matricula).ToList();
         }
 
         public ActionResult<dynamic> Insert(Avion avion)
