@@ -34,6 +34,10 @@ export class TarjetaComponent implements OnInit {
   borrar(id : any){
     this.dataService.delete(this.ruta,id).subscribe((data) =>  {
         this.cargar(this.ruta);
+        if(data != 1)
+        {
+          alert("Ocurrio un error al borrar el registro");
+        }
     });
   }
 
