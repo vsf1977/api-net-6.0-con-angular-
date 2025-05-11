@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
+import { NavbarComponent } from "./components/navbar/navbar.component";
+import { TarjetaComponent } from "./components/tarjeta/tarjeta.component";
+
+
 
 @Component({
   selector: 'app-root',
+  imports: [NavbarComponent, TarjetaComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'frontend';

@@ -1,11 +1,12 @@
-ul {
+  ul, .item{
     list-style-type: none;
     padding: 0px !important;
     overflow: hidden;
-    background-color: green;
+    background-color:teal;
+    margin: 0px;
   }
   
- li {
+  li {
     float: left;
   }
   
@@ -20,13 +21,27 @@ ul {
     background-color: yellow;
   }
 
-  .list-group-item , .list-group{
-    background-color: teal;
-  }  
-
-  .list-group > div{
+  .item > div{
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: column !important;  
+    background-color: teal;
+    margin: 5px !important;    
+  }
+
+  .item > div > li{
+    margin: 5px !important;    
+  }
+
+  .item{
+    margin: 10px !important;
+    border-radius: 15px !important;
+    border: 2px solid black;
+  }
+
+  .item > button{
+    margin: 10px !important;
+    border-radius: 15px !important;
+    border: 2px solid black;
   }
 
   .container{
@@ -40,7 +55,8 @@ ul {
   .nav_bar {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    left: 0;
+    width: 100%; /* Full width */    
     z-index: 5;
   }
 

@@ -21,7 +21,6 @@ namespace WebApplication1.Application
         }
         #endregion
 
-
         #region Methods
         public ActionResult<dynamic> GetAll()
         {
@@ -40,10 +39,9 @@ namespace WebApplication1.Application
         public ActionResult<dynamic> Insert(Avion avion)
         {
             try
-            {
+            {                
                 var res = _avionDomainService.Insert(avion);
                 return res;
-
             }
             catch (Exception ex)
             {

@@ -65,7 +65,6 @@ namespace WebApplication1.Application
             {
                 var res = _vueloDomainService.Insert(vuelo);
                 return res;
-
             }
             catch (Exception ex)
             {

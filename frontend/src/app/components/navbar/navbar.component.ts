@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-navbar',
@@ -27,5 +27,4 @@ export class NavbarComponent implements OnInit {
         }
     });
   }
-
 }

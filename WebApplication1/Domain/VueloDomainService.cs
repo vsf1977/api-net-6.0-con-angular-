@@ -16,7 +16,6 @@ namespace WebApplication1.Domain
         }
         #endregion
 
-
         #region Methods
         public List<Vuelo> GetAll()
         {
@@ -25,8 +24,13 @@ namespace WebApplication1.Domain
 
         public ActionResult<dynamic> Insert(Vuelo vuelo)
         {
-            _context.Vuelo.AddAsync(vuelo);            
-            return _context.SaveChanges();
+            if (vuelo.id_ciudad_salida != vuelo.id_ciudad_llegada)
+            {
+                _context.Vuelo.AddAsync(vuelo);
+                return _context.SaveChanges();
+            }
+            else
+                return HttpStatusCode.BadRequest;
         }
 
         public ActionResult<dynamic> Update(Vuelo vuelo)

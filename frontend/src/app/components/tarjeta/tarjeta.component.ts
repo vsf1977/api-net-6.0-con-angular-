@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
+import { DataService } from '../../services/data.service';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-tarjeta',
+  imports : [ CommonModule ],
   templateUrl: './tarjeta.component.html',
   styleUrls: ['./tarjeta.component.css']
 })
