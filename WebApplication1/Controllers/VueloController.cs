@@ -32,7 +32,6 @@ namespace WebApplication1.Controllers
         [Route("Insert")]
         public ActionResult<dynamic> Insert([FromBody] Vuelo vuelo)
         {
-
             return _vueloAppService.Insert(vuelo);
         }
 
@@ -41,7 +40,6 @@ namespace WebApplication1.Controllers
         [Route("Update")]
         public ActionResult<dynamic> Update([FromBody] Vuelo vuelo)
         {
-
             return _vueloAppService.Update(vuelo);
         }
 
@@ -49,7 +47,6 @@ namespace WebApplication1.Controllers
         [Route("Delete")]
         public ActionResult<dynamic> Delete(Guid id)
         {
-
             return _vueloAppService.Delete(id);
         }
 

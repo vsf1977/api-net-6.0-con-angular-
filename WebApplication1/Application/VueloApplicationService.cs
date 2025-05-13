@@ -34,23 +34,7 @@ namespace WebApplication1.Application
             try
             {
                 List<Vuelo> vuelo = _vueloDomainService.GetAll();
-                List<Ciudad> ciudad = _ciudadDomainService.GetAll();
-                List<Avion> avion = _avionDomainService.GetAll();
-                var query = from v in vuelo
-                            join c in ciudad
-                            on v.id_ciudad_salida equals c.id
-                            join c1 in ciudad
-                            on v.id_ciudad_llegada equals c1.id
-                            join a in avion
-                            on v.id_avion equals a.id
-                            select new
-                            {
-                                id = v.id,
-                                ciudad_salida = c.nombre,
-                                ciudad_llegada = c1.nombre,
-                                avion =  a.matricula
-                            };
-                return query.ToList();
+                return vuelo.ToList();
 
             }
             catch (Exception ex)

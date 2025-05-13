@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using WebApplication1.Controllers;
 using WebApplication1.DataAccess;
 
@@ -17,6 +18,7 @@ builder.Services.AddDbContext<DataContext>(optionsBuilder =>
 {
     optionsBuilder.UseSqlServer(builder.Configuration.GetValue<string>("ConnectionString"),
                     options => options.EnableRetryOnFailure());
+    optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
 
 DependencyInjection.RegisterProfile(builder.Services);

@@ -24,19 +24,32 @@ namespace WebApplication1.Domain
 
         public ActionResult<dynamic> Insert(Vuelo vuelo)
         {
-            if (vuelo.id_ciudad_salida != vuelo.id_ciudad_llegada)
+            List<Vuelo> vueloList = _context.Vuelo.ToList();
+            if ((vuelo.id_ciudad_salida == vuelo.id_ciudad_llegada) ||
+                (vueloList.Where(x => x.id_ciudad_salida == vuelo.id_ciudad_salida &&
+                                      x.id_ciudad_llegada == vuelo.id_ciudad_llegada &&
+                                      x.id_avion == vuelo.id_avion).Any()))                
+                return HttpStatusCode.BadRequest;
+            else
             {
                 _context.Vuelo.AddAsync(vuelo);
                 return _context.SaveChanges();
-            }
-            else
-                return HttpStatusCode.BadRequest;
+            }            
         }
 
         public ActionResult<dynamic> Update(Vuelo vuelo)
         {
-            _context.Vuelo.Update(vuelo);
-            return _context.SaveChanges();
+            List<Vuelo> vueloList = _context.Vuelo.ToList();
+            if ((vuelo.id_ciudad_salida == vuelo.id_ciudad_llegada) ||
+                (vueloList.Where(x => x.id_ciudad_salida == vuelo.id_ciudad_salida &&
+                                      x.id_ciudad_llegada == vuelo.id_ciudad_llegada &&
+                                      x.id_avion == vuelo.id_avion).Any()))
+                return HttpStatusCode.BadRequest;
+            else
+            {
+                _context.Vuelo.Update(vuelo);
+                return _context.SaveChanges();
+            }
         }
 
         public ActionResult<dynamic> Delete(Guid id)

@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "./components/navbar/navbar.component";
-import { TarjetaComponent } from "./components/tarjeta/tarjeta.component";
-
-
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent, TarjetaComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.scss'],
+  standalone: false
 })
-export class AppComponent {
-  title = 'frontend';
+export class AppComponent  {  
+   constructor() { }
+
+  ngOnInit(): void {
+  } 
+ 
 }

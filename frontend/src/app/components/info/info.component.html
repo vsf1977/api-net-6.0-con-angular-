@@ -1,0 +1,57 @@
+<div *ngIf="items.length > 0">
+    <dx-data-grid
+        id="datagrid"
+        class="dx-card content-block"
+        [dataSource]="items"
+        [showBorders]="false"
+        [focusedRowEnabled]="true"
+        [focusedRowIndex]="0"
+        [columnAutoWidth]="true"
+        [columnHidingEnabled]="true"
+        (onRowRemoving)="onDelete($event)" 
+        (onEditorPrepared)="onEditorPrepared()"  
+        (onRowInserted)="onRowInserted()"   
+        (onSaved)="onSaved($event)"   
+        [width]="'80%'">
+
+        <dxo-editing
+            mode="form"
+            [allowAdding]="true"
+            [allowUpdating]="true"
+            [allowDeleting]="true"
+            [useIcons]="true">
+        </dxo-editing>
+
+        <dxo-data-grid-paging [pageSize]="10"></dxo-data-grid-paging>
+        <dxo-data-grid-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-data-grid-pager>
+        <dxo-data-grid-filter-row [visible]="false"></dxo-data-grid-filter-row>
+
+        <dxi-column *ngIf="ruta=='avion'"
+            caption="Matricula"
+            dataField="matricula">
+        </dxi-column>
+        <dxi-column *ngIf="ruta=='avion'"
+            caption="Fabricante"
+            dataField="fabricante">
+        </dxi-column>
+        <dxi-column *ngIf="ruta=='ciudad'"
+            caption="Nombre"
+            dataField="nombre">
+        </dxi-column>
+        <dxi-column *ngIf="ruta=='vuelo'"
+            caption="Ciudad Salida"
+            dataField="id_ciudad_salida">
+            <dxo-lookup [dataSource]="ciudadList" displayExpr="nombre" valueExpr="id"></dxo-lookup>
+        </dxi-column>
+        <dxi-column *ngIf="ruta=='vuelo'"
+            caption="Ciudad Llegada"
+            dataField="id_ciudad_llegada">
+            <dxo-lookup [dataSource]="ciudadList" displayExpr="nombre" valueExpr="id"></dxo-lookup>
+        </dxi-column>
+        <dxi-column *ngIf="ruta=='vuelo'"
+            caption="Avion"
+            dataField="id_avion"><dxo-lookup></dxo-lookup>
+            <dxo-lookup [dataSource]="avionList" displayExpr="matricula" valueExpr="id"></dxo-lookup>
+        </dxi-column>        
+    </dx-data-grid>
+</div>
