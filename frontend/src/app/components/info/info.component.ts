@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
+import dxDataGrid from 'devextreme/ui/data_grid';
+import DataSource from 'devextreme/data/data_source';
+
 
 
 @Component({
@@ -9,8 +12,7 @@ import { DataService } from '../../services/data.service';
   styleUrl: './info.component.scss'
 })
 export class InfoComponent implements OnInit {
-  metodo : string ="";
-  gridInstance : any;
+  metodo : string = "";  
   items: any[] = [];
   avionList: any[] = [];
   ciudadList: any[] = [];
@@ -22,29 +24,26 @@ export class InfoComponent implements OnInit {
     this.dataService.getAll("ciudad").subscribe((data) =>  {
       this.ciudadList = data;      
     })   
-    console.log(this.ciudadList)
-    console.log(this.avionList)
   }
 
   ngOnInit(): void {    
     this.dataService.recibir.subscribe((ruta) =>{
-      this.items = [];      
+      this.items = [];
       this.ruta = ruta;           
       this.cargar(ruta);
+      console.log()
     })
   }
 
   cargar(ruta : string){    
     this.dataService.getAll(ruta).subscribe((res) =>  {
-      this.items = res;   
-      console.log(this.items)  
+      this.items = res;    
       if (!res.length) 
         alert('No hay registros para mostrar');     
     });
   } 
 
   onDelete(e: any){
-    console.log(e.data.id);
     this.dataService.delete(this.ruta,e.data.id).subscribe((res) =>  {
       this.cargar(this.ruta);
       if(res != 1)
@@ -58,22 +57,22 @@ export class InfoComponent implements OnInit {
 
   edit(data: any){
     this.dataService.edit(this.ruta,data).subscribe((res) =>  {
+      this.cargar(this.ruta);
       if(res != 1){
         alert("Ocurrio un error al editar el registro");
       }
       else
-        alert("Registro editado");
-      this.gridInstance.refresh();
+        alert("Registro editado");      
     });
   }  
 
   create(data: any){
     this.dataService.create(this.ruta,data).subscribe((res) =>  {
+      this.cargar(this.ruta);
       if(res != 1)
         alert("Ocurrio un error al insertar el registro");
       else
         alert("Registro insertado");
-      this.gridInstance.refresh();
     });
   }  
     
@@ -95,8 +94,6 @@ export class InfoComponent implements OnInit {
       if (e.changes.length)
         this.edit(JSON.stringify(e.changes[0].data))
     }    
-    console.log(e.component.refresh())
-    this.gridInstance = e.component; 
   }
 
   isDataOk(data : any){
