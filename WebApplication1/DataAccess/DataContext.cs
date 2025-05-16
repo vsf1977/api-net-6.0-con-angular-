@@ -11,6 +11,8 @@ namespace WebApplication1.DataAccess
         public DbSet<Ciudad> Ciudad { get; set; }
         public DbSet<Vuelo> Vuelo { get; set; }
 
+        public DbSet<Fabricante> Fabricante { get; set; }
+
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }

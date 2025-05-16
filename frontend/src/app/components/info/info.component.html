@@ -31,7 +31,8 @@
         </dxi-column>
         <dxi-column *ngIf="ruta=='avion'"
             caption="Fabricante"
-            dataField="fabricante">
+            dataField="id_fabricante">
+            <dxo-lookup [dataSource]="fabricanteList" displayExpr="nombre" valueExpr="id"></dxo-lookup>
         </dxi-column>
         <dxi-column *ngIf="ruta=='ciudad'"
             caption="Nombre"
@@ -49,8 +50,12 @@
         </dxi-column>
         <dxi-column *ngIf="ruta=='vuelo'"
             caption="Avion"
-            dataField="id_avion"><dxo-lookup></dxo-lookup>
+            dataField="id_avion">
             <dxo-lookup [dataSource]="avionList" displayExpr="matricula" valueExpr="id"></dxo-lookup>
+        </dxi-column>  
+        <dxi-column *ngIf="ruta=='fabricante'"
+            caption="Nombre"
+            dataField="nombre">
         </dxi-column>        
     </dx-data-grid>
 </div>

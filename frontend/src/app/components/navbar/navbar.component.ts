@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { Router } from '@angular/router';
 
@@ -16,14 +16,7 @@ export class NavbarComponent implements OnInit {
 
   routing(e : Event){
     const ruta = (e.target as HTMLInputElement).id
-    this.dataService.enviar(ruta);/*
-    if (ruta == "singlecard")
-    {
-      console.log("deberia mostrar singlecard")
-      this._router.navigate(['singlecard'])
-    }
-    else
-      this._router.navigate(['info'])*/
+    this.dataService.enviar(ruta);
     const menu = document.getElementById("menu")?.childNodes;    
     menu?.forEach(item =>
       { const enlace = item.firstChild;

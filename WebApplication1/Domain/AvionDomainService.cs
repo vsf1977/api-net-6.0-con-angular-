@@ -25,7 +25,7 @@ namespace WebApplication1.Domain
 
         public ActionResult<dynamic> Insert(Avion avion)
         {
-            _context.Avion.AddAsync(avion);            
+            _context.Avion.AddAsync(avion);
             return _context.SaveChanges();
         }
 
