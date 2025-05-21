@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{26FB3AEC-50ED-4DCA-B47D-1199FEA56E23}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\domain\\aviondomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26FB3AEC-50ED-4DCA-B47D-1199FEA56E23}|WebApplication1\\WebApplication1.csproj|c:\\users\\vladimir\\downloads\\git\\api-net-6.0-con-angular-\\webapplication1\\domain\\fabricantedomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26FB3AEC-50ED-4DCA-B47D-1199FEA56E23}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\domain\\fabricantedomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{26FB3AEC-50ED-4DCA-B47D-1199FEA56E23}|WebApplication1\\WebApplication1.csproj|c:\\users\\vladimir\\downloads\\git\\api-net-6.0-con-angular-\\webapplication1\\domain\\ciudaddomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26FB3AEC-50ED-4DCA-B47D-1199FEA56E23}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\domain\\ciudaddomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26FB3AEC-50ED-4DCA-B47D-1199FEA56E23}|WebApplication1\\WebApplication1.csproj|c:\\users\\vladimir\\downloads\\git\\api-net-6.0-con-angular-\\webapplication1\\domain\\vuelodomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26FB3AEC-50ED-4DCA-B47D-1199FEA56E23}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\domain\\vuelodomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26FB3AEC-50ED-4DCA-B47D-1199FEA56E23}|WebApplication1\\WebApplication1.csproj|c:\\users\\vladimir\\downloads\\git\\api-net-6.0-con-angular-\\webapplication1\\domain\\fabricantedomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26FB3AEC-50ED-4DCA-B47D-1199FEA56E23}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\domain\\fabricantedomainservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26FB3AEC-50ED-4DCA-B47D-1199FEA56E23}|WebApplication1\\WebApplication1.csproj|c:\\users\\vladimir\\downloads\\git\\api-net-6.0-con-angular-\\webapplication1\\models\\vuelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "FabricanteDomainService.cs",
               "DocumentMoniker": "C:\\Users\\Vladimir\\Downloads\\git\\api-net-6.0-con-angular-\\WebApplication1\\Domain\\FabricanteDomainService.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Domain\\FabricanteDomainService.cs",
@@ -59,13 +59,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "VueloDomainService.cs",
               "DocumentMoniker": "C:\\Users\\Vladimir\\Downloads\\git\\api-net-6.0-con-angular-\\WebApplication1\\Domain\\VueloDomainService.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Domain\\VueloDomainService.cs",
               "ToolTip": "C:\\Users\\Vladimir\\Downloads\\git\\api-net-6.0-con-angular-\\WebApplication1\\Domain\\VueloDomainService.cs",
               "RelativeToolTip": "WebApplication1\\Domain\\VueloDomainService.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T23:09:10.675Z",
               "EditorCaption": ""
@@ -85,13 +85,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CiudadDomainService.cs",
               "DocumentMoniker": "C:\\Users\\Vladimir\\Downloads\\git\\api-net-6.0-con-angular-\\WebApplication1\\Domain\\CiudadDomainService.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Domain\\CiudadDomainService.cs",
               "ToolTip": "C:\\Users\\Vladimir\\Downloads\\git\\api-net-6.0-con-angular-\\WebApplication1\\Domain\\CiudadDomainService.cs",
               "RelativeToolTip": "WebApplication1\\Domain\\CiudadDomainService.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T22:57:30.252Z",
               "EditorCaption": ""
@@ -106,8 +106,7 @@
               "RelativeToolTip": "WebApplication1\\Models\\Vuelo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T21:56:49.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T21:56:49.891Z"
             },
             {
               "$type": "Document",
@@ -119,8 +118,7 @@
               "RelativeToolTip": "WebApplication1\\Models\\Avion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T21:56:21.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T21:56:21.216Z"
             },
             {
               "$type": "Document",
@@ -132,8 +130,7 @@
               "RelativeToolTip": "WebApplication1\\Models\\Fabricante.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T21:56:19.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T21:56:19.764Z"
             },
             {
               "$type": "Document",
@@ -145,8 +142,7 @@
               "RelativeToolTip": "WebApplication1\\Controllers\\FabricanteController.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAgwAwAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T21:46:03.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-15T21:46:03.811Z"
             }
           ]
         }

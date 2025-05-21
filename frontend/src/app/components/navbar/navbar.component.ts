@@ -1,9 +1,11 @@
-import { Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, OnInit} from '@angular/core';
 import { DataService } from '../../services/data.service';
 import { Router } from '@angular/router';
+import { NgFor, TitleCasePipe } from '@angular/common'
 
 @Component({
   selector: 'app-navbar',
+  imports: [NgFor, TitleCasePipe],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
@@ -11,6 +13,8 @@ export class NavbarComponent implements OnInit {
 
   constructor(public dataService: DataService, private _router: Router) { }
 
+  rutas : string[] = ["avion", "ciudad","vuelo", "fabricante"] 
+  
   ngOnInit(): void {
   }
 

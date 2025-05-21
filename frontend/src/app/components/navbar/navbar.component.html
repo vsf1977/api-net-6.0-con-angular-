@@ -1,8 +1,5 @@
 <div class="nav_bar">
-  <ul id="menu">
-    <li><a id="avion" class="normal" (click)="routing($event)">Aviones</a></li>
-    <li><a id="ciudad" class="normal" (click)="routing($event)">Ciudades</a></li>
-    <li><a id="vuelo" class="normal" (click)="routing($event)">Vuelos</a></li>
-    <li><a id="fabricante" class="normal" (click)="routing($event)">Fabricante</a></li>
+  <ul id="menu" >
+    <li *ngFor="let ruta of rutas"><a id="{{ruta}}" class="normal" (click)="routing($event)">{{ruta | titlecase }}</a></li>
   </ul>
 </div>
