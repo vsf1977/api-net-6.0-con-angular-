@@ -16,7 +16,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<DataContext>(optionsBuilder =>
 {
-    optionsBuilder.UseSqlServer(builder.Configuration.GetValue<string>("ConnectionString"),
+    optionsBuilder.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
                     options => options.EnableRetryOnFailure());
     optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });

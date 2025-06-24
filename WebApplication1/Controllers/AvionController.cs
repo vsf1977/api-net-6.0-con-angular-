@@ -28,6 +28,13 @@ namespace WebApplication1.Controllers
             return _avionAppService.GetAll();
         }
 
+        [HttpGet]
+        [Route("GetAeropuertos")]
+        public ActionResult<dynamic> GetAeropuertos()
+        {
+            return _avionAppService.GetAeropuertos();
+        }
+
         [HttpPost]
         [Route("Insert")]
         public ActionResult<dynamic> Insert([FromBody] Avion avion)

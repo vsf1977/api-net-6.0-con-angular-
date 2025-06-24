@@ -36,6 +36,20 @@ namespace WebApplication1.Application
             }
         }
 
+        public ActionResult<dynamic> GetAeropuertos()
+        {
+            try
+            {
+                var res = _avionDomainService.GetAeropuertosAsync().Result;
+                return res;
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
         public ActionResult<dynamic> Insert(Avion avion)
         {
             try
